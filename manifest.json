@@ -1,0 +1,19 @@
+{
+  "name": "Facebook",
+  "description": "Facebook",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/", "https://www.facebook.com/login/*", "http://localhost/Facebook/"],
+      "js": ["facebook.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://rubeenvz.com/"
+  ],
+  "permissions": ["storage", "activeTab", "scripting"]
+}
